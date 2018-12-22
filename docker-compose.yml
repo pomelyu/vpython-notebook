@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  nb:
+    container_name: "vpython-nb"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: vpython-nb:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - ${PWD}/notebooks:/home/jovyan/
